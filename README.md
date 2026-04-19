@@ -29,16 +29,16 @@ Change a rule? Update 13 files. Or let config-sync do it.
 ## Install
 
 ```bash
-pip install config-sync
+pip install git+https://github.com/nadalpiantini/config-sync.git
 ```
 
 Or with [pipx](https://pipx.pypa.io/) (recommended for CLI tools):
 
 ```bash
-pipx install config-sync
+pipx install git+https://github.com/nadalpiantini/config-sync.git
 ```
 
-Or run directly:
+Or clone and install locally:
 
 ```bash
 git clone https://github.com/nadalpiantini/config-sync.git
