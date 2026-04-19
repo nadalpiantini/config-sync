@@ -9,6 +9,7 @@ from pathlib import Path
 
 from .detectors import detect_tools
 from .generators import TOOLS
+from . import __version__
 
 
 def strip_frontmatter(content: str) -> str:
@@ -88,7 +89,7 @@ def main() -> None:
     parser.add_argument("--dry-run", action="store_true", help="Preview without writing files")
     parser.add_argument("--init", action="store_true", help="Create .claude/rules/ from CLAUDE.md")
     parser.add_argument("--list-tools", action="store_true", help="List supported tools and exit")
-    parser.add_argument("--version", action="version", version="%(prog)s 1.0.1")
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     args = parser.parse_args()
 
     if args.list_tools:
