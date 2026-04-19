@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "config-sync"
+name = "aiconfigsync"
 version = "1.0.0"
 description = "Generate AI coding assistant config files from a single source. 12 tools, 1 command."
 readme = "README.md"
@@ -30,6 +30,9 @@ config-sync = "config_sync.cli:main"
 Homepage = "https://github.com/nadalpiantini/config-sync"
 Repository = "https://github.com/nadalpiantini/config-sync"
 Issues = "https://github.com/nadalpiantini/config-sync/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/config_sync"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -29,13 +29,13 @@ Change a rule? Update 13 files. Or let config-sync do it.
 ## Install
 
 ```bash
-pip install git+https://github.com/nadalpiantini/config-sync.git
+pip install aiconfigsync
 ```
 
 Or with [pipx](https://pipx.pypa.io/) (recommended for CLI tools):
 
 ```bash
-pipx install git+https://github.com/nadalpiantini/config-sync.git
+pipx install aiconfigsync
 ```
 
 Or clone and install locally:
