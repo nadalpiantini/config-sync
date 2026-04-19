@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "aiconfigsync"
-version = "1.0.0"
+version = "1.0.1"
 description = "Generate AI coding assistant config files from a single source. 12 tools, 1 command."
 readme = "README.md"
 license = "MIT"

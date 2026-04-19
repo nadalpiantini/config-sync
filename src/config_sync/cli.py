@@ -83,12 +83,12 @@ def main() -> None:
         prog="config-sync",
         description="Generate AI coding assistant config files from a single source.",
     )
-    parser.add_argument("repo", help="Path to project repository")
+    parser.add_argument("repo", nargs="?", help="Path to project repository")
     parser.add_argument("--tools", help="Comma-separated tool list (default: all)")
     parser.add_argument("--dry-run", action="store_true", help="Preview without writing files")
     parser.add_argument("--init", action="store_true", help="Create .claude/rules/ from CLAUDE.md")
     parser.add_argument("--list-tools", action="store_true", help="List supported tools and exit")
-    parser.add_argument("--version", action="version", version="%(prog)s 1.0.0")
+    parser.add_argument("--version", action="version", version="%(prog)s 1.0.1")
     args = parser.parse_args()
 
     if args.list_tools:
@@ -125,6 +125,9 @@ def main() -> None:
     if not selected:
         print("ERROR: No valid tools selected.", file=sys.stderr)
         sys.exit(1)
+
+    if not args.repo:
+        parser.error("the following arguments are required: repo")
 
     detected = detect_tools(repo)
     print(f"Source: {len(source)} chars")
